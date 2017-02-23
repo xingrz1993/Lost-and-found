@@ -390,12 +390,18 @@ to { left: -100%; }
 }
 
 /* Add some padding inside the card container */
-.container {
+div.container {
     padding: 2px 16px;
+	width:70%;
+	overflow:hidden;
 }
+
+
 
 div.cardposter{
 	float:left;
+	width:30%;
+	padding-right:5px;
 }
 
 img.cardposter{
