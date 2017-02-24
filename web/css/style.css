@@ -319,7 +319,7 @@ to { left: -100%; }
     color: #fff;
     text-decoration: none;
     line-height: 1;
-	font-family: 'Courgette', cursive;
+	font-family: Impact, Charcoal, sans-serif;
 }
 .agileinfo_menu_left h1 a span {
     font-size:0.43em;
@@ -787,7 +787,7 @@ opacity: .1;
 .w3agile__text  h4,.w3agile__text span{
 	font-size:1em;
 	color:#fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Courier New", Courier, monospace;
 }
 #country,#country1,#country2,#country3{
 	outline: none;
@@ -1375,7 +1375,7 @@ a.w3_g_plus:hover{
 .w3l_post_left h3{
     font-size:1em;
 	color:#212121;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Courier New", Courier, monospace;
 }
 
 .w3l_post_left2{
