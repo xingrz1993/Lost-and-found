@@ -153,12 +153,12 @@
 <!-- //banner -->
 <!-- post -->
 	<div class="post">
-		<form>
+		<form method="post" action="no">
 		<div class="w3l_post_left">
 			<input type="radio" name="property" value="lost">Lost
 			<input type="radio" name="property" value="found">Found<br>
 
-			<h3>Item Title:</h3> <input type="text" name="title"><br>
+			<h3>Item Title:</h3> <input type="text" name="title" required><br>
 			
 			<h3>Category</h3>
 			<select id="category" onchange="change_country(this.value)" style="width:80%" class="frm-field required">
@@ -171,27 +171,30 @@
 			
 			<h3>Date of Lost/Found: </h3>
 			<!--<input type="text" name="date">-->
-			<input type="radio" name="datum" value="withdate">
-			<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+			<input type="radio" name="withdate" value="yes">
+			<input class="date" id="datepicker" name="Text" type="text" placeholder="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
 			
-			<input type="radio" name="datum" value="withoutdate">I don't know
+			<input type="radio" name="withdate" value="no">I forgot.
 			<br>
 				
 			
 			<h3>Description:</h3> 
-			<textarea rows="10" cols="30"></textarea>
+			<textarea rows="10" cols="30" required></textarea>
 			<br>
 			
-			<h3>Photo Upload:</h3>
-			<input type="file" onchange="previewImage(this)" />
+			<h3>Photo Upload(You can select multiple photos):</h3>
+			<input type="file" onchange="previewImage(this)" multiple >
 			<br>
-		</div>			
+			<input type="submit" value="Post">	
+		</div>	
+		
 		</form>
 		
-		<div class="w3l_post_left2">
+		<!--<div class="w3l_post_left2">
 		
 		<a href="single.html">Post</a>
-		</div>
+		
+		</div>-->
 		
 		<div class="clearfix"> </div>
 	</div>
