@@ -16,6 +16,7 @@
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
@@ -32,7 +33,7 @@
 	});
 </script>
 </head>
-<body class="bg">
+<body class="bg" ><!--onload="readData()"-->
 <!-- menu -->
 	<button class="btn-nav w3layouts_btn">
 		<span class="bar arrow-top-r"></span>
@@ -152,10 +153,26 @@
 	<div class="card">
 		<div class="cardposter">
 			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar">
-			<p>John Smith<p>
+			<p id="loadName">John Smith<p>
+		</div>
+		<div class="container">
+			
+			<h3 id="loadTitle"><b>This is the heading</b></h3> 
+			<button class="item_lost_btom">LOST</button>
+			<p id="loadTime">posted on XXX<p>
+			<p id="loadDescription">This is the description of item.</p> 
+			
+		</div>
+	</div>
+	
+	<div class="card">
+		<div class="cardposter">
+			<img class="cardposter" src="./images/img_avatar2.png" alt="Avatar">
+			<p>Ann Smith<p>
 		</div>
 		<div class="container">
 			<h3><b>This is the heading</b></h3> 
+			<button class="item_found_btom">FOUND</button>
 			<p>posted on XXX<p>
 			<p>This is the description of item.</p> 
 		</div>
@@ -168,20 +185,10 @@
 		</div>
 		<div class="container">
 			<h3><b>This is the heading</b></h3> 
+			<button class="item_lost_btom">LOST</button>
 			<p>posted on XXX<p>
 			<p>This is the description of item.</p> 
-		</div>
-	</div>
-	
-	<div class="card">
-		<div class="cardposter">
-			<img class="cardposter" src="./images/img_avatar2.png" alt="Avatar">
-			<p>Ann Smith<p>
-		</div>
-		<div class="container">
-			<h3><b>This is the heading</b></h3> 
-			<p>posted on XXX<p>
-			<p>This is the description of item.</p> 
+			
 		</div>
 	</div>
 	
