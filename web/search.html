@@ -119,6 +119,11 @@
 							$( "#datepicker" ).datepicker();
 						  });
 				  </script>
+				  <script>
+						  $(function() {
+							$( "#datepicker2" ).datepicker();
+						  });
+				  </script>
 			<!-- //Calendar -->
 			</div>
 			<h5>Already a member <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Log In</a></h5>
@@ -164,14 +169,15 @@
 						<br>
 						<input type="checkbox" name="search_type" value="date">Date:
 						<p>Since</p>
-						<input class="date" id="datepicker" name="since_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';"  required="">
+						<input class="date" id="datepicker" name="since_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" >
 						<p>Until</p>
-						<input class="date" id="datepicker" name="until_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';"  required="">
+						<input class="date" id="datepicker2" name="until_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" >
 						<br>
 						<input type="checkbox" name="search_type" value="solved">Include solved cases.
 						<br><br>
 					</div>
 				</div>
+				<input type="submit" value="Go!" class="banner_btom_3">
 				
 			</div>
 		</form>
