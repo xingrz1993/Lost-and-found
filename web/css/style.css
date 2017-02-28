@@ -745,21 +745,18 @@ opacity: .1;
 }
 
 .search_input{
-	width: 40%;
+	width: 100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     background-color: white;
     background-image: url("../images/ic_search.png");
-    background-position: 10px 10px;
+    background-position: left center;
 	background-size: 30px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
 }
-.search_input:focus{width:100%;}
 
 /*-- banner-bottom --*/
 .banner-bottom{
@@ -793,19 +790,52 @@ opacity: .1;
 	text-align:center;
 }
 .search_btom_1{
-	width:34%;
+	width:%;
 	margin:0 2em;
 	background: #CCCCCC;
     color: #212121;
 	border-radius: 5px;
 }
-
+.material-icons{float:right;}
+.material-icons.padd {padding: 12px 20px 12px 0px;}
+.material-icons.md-40 { font-size: 40px; }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .search_btom_1 h3{
 	color: #212121;
 	text-align:middle;
 }
+
+/* Style the buttons that are used to open and close the search_advanced panel */
+button.search_advanced {
+    background-color: #CCCCCC;
+    color: #444;
+    cursor: pointer;
+    padding: 16px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+	border-radius: 5px 5px 0px 0px;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.search_advanced.active, button.search_advanced:hover {
+    background-color: #ddd;
+}
+
+/* Style the search_advanced panel. Note: hidden by default */
+div.search_panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding: 0 18px;
+    background-color: white;
+}
+
 .w3agile__text  h3,.w3agile__text span{
 	color:#fff;
+	font-size: 1em;
 	font-family: "Courier New", Courier, monospace;
 }
 #country,#country1,#country2,#country3{

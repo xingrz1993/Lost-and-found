@@ -16,6 +16,7 @@
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
@@ -23,22 +24,7 @@
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 <!-- //web-fonts -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<script>
-	$(document).ready(function(){
-		$("#Advanced").hide();
-		$("#ShowAdvanced").click(function(){
-			$("#Advanced").toggle();
-		});
-	});
-</script>
+
 </head>
 <body class="bg">
 <!-- menu -->
@@ -158,50 +144,39 @@
 <!--//pop-up-box -->
 <!-- banner-bottom -->
 	<div class="banner-bottom-search">
-		<form action="#" method="get">
+		<form action="#" method="post">
 			<div class="search_main">
-				<input class="search_input" type="text" name="search" placeholder="I am looking for..">
-				
+				<input class="search_input" type="text" name="search" placeholder="Search..">	
 			</div>
 			<br>
 			
-			<div class="search_advanced w3agile__text">
-				<div class="search_btom_1" id="ShowAdvanced">
-					<h3>Advanced</h3>
+			<div>
+				<button class="search_advanced">
+					
+					<i class="material-icons">add_circle_outline</i>
+					<h4>Advanced</h4>
+				</button>
+				<div class="search_panel">
+					<div class="search_detail">
+						<input type="checkbox" name="search_type" value="lost" checked>Lost
+						<input type="checkbox" name="search_type" value="found" checked>Found
+						<br>
+						<br>
+						<input type="checkbox" name="search_type" value="date">Date:
+						<p>Since</p>
+						<input class="date" id="datepicker" name="since_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';"  required="">
+						<p>Until</p>
+						<input class="date" id="datepicker" name="until_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';"  required="">
+						<br>
+						<input type="checkbox" name="search_type" value="solved">Include solved cases.
+						<br><br>
+					</div>
 				</div>
-				<div class="search_detail" id="Advanced" >Let's try!</div>
+				
 			</div>
 		</form>
 		
 	</div>
-<!--
-	<div class="banner-bottom-search" style="height:150px">
-		<div class="banner_btom_search">
-			<form action="#" method="get">
-				<div class="w3agile__text banner_btom">
-					<h4>I'm looking for a</h4>
-					<select id="lost" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">Lost</option>
-						<option value="null">Found</option>   
-					</select>
-				</div>
-				<div class="w3agile__text banner_btom_1">
-					<h4>Category</h4>
-					<select id="category" onchange="change_country(this.value)" style="width:80%" class="frm-field required">
-						<option value="null">key</option>
-						<option value="null">books</option>   
-						<option value="null">bags</option>   
-						<option value="null">others</option>    					
-					</select>
-				</div>
-				<div class="banner_btom_4">
-				</div>
-				<div class="banner_btom_3">
-					<a href="single.html">Search</a>
-				</div>
-				
-			</form>
--->			
 
 
 
@@ -246,5 +221,29 @@
  });
 </script>
 <!-- //nav -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<script>
+var acc = document.getElementsByClassName("search_advanced");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
 </body>
 </html>
