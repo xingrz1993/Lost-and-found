@@ -153,12 +153,13 @@
 <!-- //banner -->
 <!-- post -->
 	<div class="post">
-		<form method="post" action="no">
+		<form id="post_form" method="post" action="no">
 		<div class="w3l_post_left">
 			<input type="radio" name="property" value="lost">Lost
 			<input type="radio" name="property" value="found">Found<br>
+			<br>
 
-			<h3>Item Title:</h3> <input type="text" name="title" required><br>
+			<h3>Item Title:</h3> <input type="text" name="title" style="width:80%" required><br>
 			
 			<h3>Category</h3>
 			<select id="category" onchange="change_country(this.value)" style="width:80%" class="frm-field required">
@@ -172,7 +173,7 @@
 			<h3>Date of Lost/Found: </h3>
 			<!--<input type="text" name="date">-->
 			<input type="radio" name="withdate" value="yes">
-			<input class="date" id="datepicker" name="Text" type="text" placeholder="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+			<input class="date" id="datepicker" name="Text" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
 			
 			<input type="radio" name="withdate" value="no">I forgot.
 			<br>
@@ -185,7 +186,7 @@
 			<h3>Photo Upload(You can select multiple photos):</h3>
 			<input type="file" onchange="previewImage(this)" multiple >
 			<br>
-			<input type="submit" value="Post">	
+			<button class="search_btom_1" type="button" id="post_btom" name="submit" onclick="onSubmit()">Submit</button>	
 		</div>	
 		
 		</form>
@@ -210,5 +211,24 @@
  });
 </script>
 <!-- //nav -->
+<script type="text/javascript">
+function onSubmit(){
+	var myForm = document.getElementById('post_form');
+	var formData = new FormData(myForm);
+	for (var p of formData){
+		console.log(p);
+	}
+	$.ajax({
+		type: 'POST',
+		url: '/get',
+		data: formData,
+		dataType: 'json',
+		processData: false,
+		contentType: false,
+		success: function(data){console.log(data)},
+		error: function(jqXHR){console.log(jqXHR)},
+	})
+}
+</script>
 </body>
 </html>
