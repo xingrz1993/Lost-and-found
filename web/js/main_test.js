@@ -2,7 +2,7 @@ $(function(){
 	var $cards = $('#cards');
 	$.ajax({
 		type:'GET',
-		url:'/api/cards',
+		url:'./api/cards',
 		contentType: 'application/json',
 		success:function(cardsStr){
 			var cardsObj = eval('(' + cardsStr + ')');
