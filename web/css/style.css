@@ -791,6 +791,12 @@ opacity: .1;
     color: #212121;
 	border-radius: 5px;
 }
+.search_btom_2{
+	float:right;
+	background: #CCCCCC;
+    color: #212121;
+	border-radius: 5px;
+}
 .material-icons.right{float:right;}
 .material-icons.padd {padding: 12px 20px 12px 0px;}
 .material-icons.md-40 { font-size: 40px; }
