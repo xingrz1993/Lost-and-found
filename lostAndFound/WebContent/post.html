@@ -18,6 +18,7 @@
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script type='text/javascript' src='js/post.js'></script>
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -160,42 +161,42 @@
 			<br>
 
 			<h3>Item Title:</h3> <input type="text" name="title" style="width:80%" required><br>
-			
+			<!--
 			<h3>Category</h3>
-			<select id="category" onchange="change_country(this.value)" style="width:80%" class="frm-field required">
+			<select id="category" name="category" onchange="change_country(this.value)" style="width:80%" class="frm-field required">
 				<option value="null">key</option>
 				<option value="null">books</option>   
 				<option value="null">bags</option>   
 				<option value="null">others</option>    					
 			</select>
+			-->
 			<br>
 			
 			<h3>Date of Lost/Found: </h3>
 			<!--<input type="text" name="date">-->
 			<input type="radio" name="withdate" value="yes">
-			<input class="date" id="datepicker" name="Text" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
-			
+			<input class="date" id="datepicker" name="date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" >
+			<br>
 			<input type="radio" name="withdate" value="no">I forgot.
 			<br>
 				
 			
 			<h3>Description:</h3> 
-			<textarea rows="10" cols="30" required></textarea>
+			<textarea rows="10" cols="30" name="description" required></textarea>
 			<br>
-			
-			<h3>Photo Upload(You can select multiple photos):</h3>
-			<input type="file" onchange="previewImage(this)" multiple >
+<!--		</form>
+		<form action="/php/upload.php" method="post" enctype="multipart/form-data">
+			<h3>Photo Upload:</h3>
+			<div>
+				<input type="file" name="photoToUpload" id="photoToUpload" >
+				<button class="search_btom_2" type="submit"  name="upload">Upload</button>
+			</div> -->
 			<br>
-			<button class="search_btom_1" type="button" id="post_btom" name="submit" onclick="onSubmit()">Submit</button>	
+			<br>
+			<button class="search_btom_1" type="button" id="post_btom" name="submit">Submit</button>	
 		</div>	
 		
-		</form>
-		
-		<!--<div class="w3l_post_left2">
-		
-		<a href="single.html">Post</a>
-		
-		</div>-->
+		</form> 
 		
 		<div class="clearfix"> </div>
 	</div>
@@ -211,24 +212,5 @@
  });
 </script>
 <!-- //nav -->
-<script type="text/javascript">
-function onSubmit(){
-	var myForm = document.getElementById('post_form');
-	var formData = new FormData(myForm);
-	for (var p of formData){
-		console.log(p);
-	}
-	$.ajax({
-		type: 'POST',
-		url: '/get',
-		data: formData,
-		dataType: 'json',
-		processData: false,
-		contentType: false,
-		success: function(data){console.log(data)},
-		error: function(jqXHR){console.log(jqXHR)},
-	})
-}
-</script>
 </body>
 </html>
