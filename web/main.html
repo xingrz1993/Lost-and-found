@@ -5,22 +5,22 @@
 <!-- For-Mobile-Apps-and-Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Matchmaking Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, SmartPhone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript"> 
+addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //For-Mobile-Apps-and-Meta-Tags -->
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link rel='stylesheet' id='fluid_dg-css'  href='css/fluid_dg.css' type='text/css' media='all'>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
-<script src='js/main_test.js'></script>
+<script src='js/main_get.js'></script>
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -34,9 +34,10 @@
 	});
 </script>
 </head>
-<body class="bg" style="background-color:#212121">
+<body>
 <!-- menu -->
-	<button class="btn-nav w3layouts_btn">
+<!-- nav-bar -->
+	<button class="btn-nav">
 		<span class="bar arrow-top-r"></span>
 		<span class="bar arrow-middle-r"></span>
 		<span class="bar arrow-bottom-r"></span>
@@ -44,17 +45,18 @@
 	<nav class="nav-container hidden hideNav w3_nav">
 	  <ul class="nav-list">
 		<li class="list-item active"><a href="main.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="post.html"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="services.html"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="post.html"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="my_page.html"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></a></li>
 	  </ul>
 	</nav>
+<!-- //nav-bar -->
+
 	<div id="ban" class="agileinfo_menu w3l_menu">
 		<div class="agileinfo_menu_middle">
 			<br>
 			<h1><a href="main.html">Room of Requirements</a></h1>
+			<p><b>--A Lost and Found Platform<b></p>
 		</div>
 		<div class="agileinfo_menu_middle">
 			<ul>
@@ -69,8 +71,8 @@
 	</div>
 <!-- //menu -->
 <!-- pop-up-box -->
-	<div id="small-dialog" class="mfp-hide w3ls_small_dialog">
-		<h2>Log In</h2>		
+	<div id="small-dialog" class="mfp-hide">
+		<h2><b>Log In</b></h2>		
 		<div class="modal-body agileits_modal_body">
 			 <form action="#" method="post">
 				<span>
@@ -98,7 +100,7 @@
 		</div>
 	</div>
 	<div id="small-dialog1" class="mfp-hide">
-		<h2>Sign Up</h2>		
+		<h2><b>Sign Up</b></h2>		
 		<div class="modal-body w3_agileits_modal_body">
 			<form action="#" method="post">
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
@@ -157,12 +159,12 @@
 			<p>John<p> 
 			<i class="material-icons">message</i> 
 		</div>	
-		<div class="container">	
-			<h3><b>Lost a wallet(demo)</b></h3> 
-			<button class="item_lost_btom">lost</button>
-			<p>posted on 02/02/2017</p>
+		<div class="card_container">				
+			<h3 class="card_container_title"><b>Lost a wallet(demo)</b></h3> 
+			<button class="item_unsolved_bton">unsolved</button><button class="item_lost_bton">lost</button>
+			<p>posted on 2017-02-02</p>
 			<br>
-			<p>The wallet is lost in xxx store, containing xxxx</p>
+			<p class="card_container_des">The wallet is lost in xxx store, containing xxxxxxxxx xxx x xxxxxx xxxxxx xx xxxxxx xxxx xx. I need more words to fill in this area. I need more words to fill in this area. I need more words to fill in this area. </p>
 		</div>
 	</div>
 </div>	

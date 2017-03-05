@@ -5,8 +5,9 @@
 "property":"found",
 "title":"A key found in XXX",
 "description":"A black key is found yesterday, on the floor of XXX office. Please contact me asap.",
+"stat":"unsolved",
 "photo":"none",
-"postDate":"02/02/2017",
+"postDate":"2017-02-02",
 "itemDate":"none",
 "userID":1001,
 "userName":"Adam",
@@ -17,9 +18,9 @@
 "property":"lost",
 "title":"Did you see a purple wallet nearby XXX?",
 "description":"The wallet was lost yesterday, on my way home, maybe around aaa street, bbb building and ccc street. The one who found it will be rewarded.",
+"stat":"solved",
 "photo":"none",
-"postDate":"02/03/2017",
-"itemDate":"02/02/2017",
+"postDate":"2017-02-02",
 "userName":"Shirley",
 "userAvatar":"./images/img_avatar2.png"
 }
