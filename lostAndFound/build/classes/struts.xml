@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<!--解决乱码    -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant> 
+	
+	<package name="lostfound" extends="struts-default,json-default">
+		<action name="excuteAjaxJsonAction" method="excuteAjax" class="lostAndFound.com.action.JsonAction">
+			
+			<!-- 返回json类型数据 -->
+			<result type="json">
+				<param name="root">result<!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 --></param>
+			</result>
+			
+		</action>
+		
+		
+		<action name="excutePostJsonAction" method="excuteAjax" class="lostAndFound.com.action.PostAction">
+			<result name="fail"></result>
+			
+			<result name="success">/main.html</result>
+		</action>
+		
+	</package>
+	
+</struts>   

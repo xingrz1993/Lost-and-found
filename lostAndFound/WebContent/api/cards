@@ -10,7 +10,7 @@
 "itemDate":"none",
 "userID":1001,
 "userName":"Adam",
-"userAvatar":"./images/img_avatar.png"
+"userAvatar":"/images/img_avatar.png"
 },
 {
 "itemID":0002,
@@ -21,6 +21,6 @@
 "postDate":"02/03/2017",
 "itemDate":"02/02/2017",
 "userName":"Shirley",
-"userAvatar":"./images/img_avatar2.png"
+"userAvatar":"/images/img_avatar2.png"
 }
 ]
