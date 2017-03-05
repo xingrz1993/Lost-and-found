@@ -122,7 +122,9 @@
 				<script src="js/jquery-ui.js"></script>
 				  <script>
 						  $(function() {
-							$( "#datepicker" ).datepicker();
+							$( "#datepicker" ).datepicker({
+							  dateFormat: "yy-mm-dd"
+							});
 						  });
 				  </script>
 			<!-- //Calendar -->
@@ -175,7 +177,7 @@
 			<h3>Date of Lost/Found: </h3>
 			<!--<input type="text" name="date">-->
 			<input type="radio" name="withdate" value="yes">
-			<input class="date" id="datepicker" name="date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" >
+			<input class="date" id="datepicker" name="date" type="text" placeholder="yyyy-mm-dd" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2017-03-04';}" >
 			<br>
 			<input type="radio" name="withdate" value="no">I forgot.
 			<br>
