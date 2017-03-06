@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Page</title>
+<!-- For-Mobile-Apps-and-Meta-Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
+<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- //font-awesome icons -->
+<!-- js -->
+<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script type='text/javascript' src='js/search_result.js'></script>
+<!-- //js -->
+<!-- web-fonts -->  
+<link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<!-- //web-fonts -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+</head>
+
+<body>
+<!-- menu -->
+<!-- nav-bar -->
+	<button class="btn-nav">
+		<span class="bar arrow-top-r"></span>
+		<span class="bar arrow-middle-r"></span>
+		<span class="bar arrow-bottom-r"></span>
+	</button>
+	<nav class="nav-container hidden hideNav w3_nav">
+	  <ul class="nav-list">
+		<li class="list-item active"><a href="main.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="post.html"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="my_page.html"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></a></li>
+	  </ul>
+	</nav>
+<!-- //nav-bar -->
+
+	<div id="ban" class="agileinfo_menu w3l_menu">
+		<div class="agileinfo_menu_middle">
+			<br>
+			<h1><a href="main.html">Room of Requirements</a></h1>
+			<p><b>--A Lost and Found Platform</b></p>
+			<br>
+			<br>
+			<p><b>John's Page</b></p>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- //menu -->
+
+<!-- card-of-item -->
+<div id = "my_cards">
+	<div class="card">	
+		<div class="cardposter"> 
+			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar"> 
+			<p>John<p> 
+			<i class="material-icons">message</i> 
+		</div>	
+		<div class="card_container">				
+			<h3 class="card_container_title"><b>Lost a wallet(demo)</b></h3> 
+			<button class="item_unsolved_bton">unsolved</button><button class="item_lost_bton">lost</button>
+			<p>posted on 2017-02-02</p>
+			<br>
+			<p class="card_container_des">The wallet is lost in xxx store, containing xxxxxxxxx xxx x xxxxxx xxxxxx xx xxxxxx xxxx xx. I need more words to fill in this area. I need more words to fill in this area. I need more words to fill in this area. </p>
+		</div>
+		<button type="button" class="search_btom_3">Delete</button>
+		<button type="button" class="search_btom_4">Solve</button>
+	</div>
+
+</div>	
+
+<!-- //card-of-item -->
+<!-- footer -->
+	<div class="footer_app">
+		<div class="agileits_footer_app_left">
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- //footer -->
+<!-- nav -->
+<script>
+ $(window).load(function() {
+   $(".btn-nav").on("click tap", function() {
+     $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
+     $(this).toggleClass("animated");
+   });
+ });
+</script>
+<!-- //nav -->
+</body>
+</html>
+
