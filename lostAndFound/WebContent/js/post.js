@@ -2,9 +2,8 @@
 
 	$("#post_btom").click(function(){
 		var item = {
-			"property":($("input[name='property']")).val(),
+			"property":($("input[name='property']:checked")).val(),
 			"title":($("input[name='title']")).val(),
-	//		"category":($("select[name='category']")).val(),
 			"date":($("input[name='date']")).val(),
 			"description":$("textarea[name='description']").val()
 		};
@@ -12,8 +11,9 @@
 		var itemStr = JSON.stringify(item);
 		$.ajax({
 		type:'POST',
-		url:'api/get',
+		url:'excutePostJsonAction',
 		data: itemStr,
+		dataType:"json",
 		success: function(data){console.log(data)},
 		error: function(jqXHR){console.log(jqXHR)},
 		});

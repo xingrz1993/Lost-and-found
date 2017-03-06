@@ -126,7 +126,9 @@ function hideURLbar(){ window.scrollTo(0,1); }
 				<script src="js/jquery-ui.js"></script>
 				  <script>
 						  $(function() {
-							$( "#datepicker" ).datepicker();
+							$( "#datepicker" ).datepicker({
+ -							  dateFormat: "yy-mm-dd"
+ -							});
 						  });
 				  </script>
 			<!-- //Calendar -->
