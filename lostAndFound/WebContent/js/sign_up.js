@@ -1,5 +1,5 @@
-$(function{
-	$('#sign_up').submit({
+$(function(){
+	$('#sign_up').submit(function(event){
 		var user = {
 			"email":($("input[name='Email']")).val(),
 			"password":($("input[name='Password']")).val(),
@@ -15,5 +15,6 @@ $(function{
 		dataType:"json",
 		success: function(data){console.log(data)},
 		error: function(jqXHR){console.log(jqXHR)},
+	});
 	});
 });
