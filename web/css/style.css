@@ -791,8 +791,9 @@ opacity: .1;
 	text-align:center;
 }
 .search_btom_1{
+	text-align:center;
 	width:100%;
-	padding:5px 0;
+	padding:10px 0;
 	margin:2em 0;
 	background: #CCCCCC;
     color: #212121;

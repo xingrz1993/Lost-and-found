@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Page</title>
+<!-- For-Mobile-Apps-and-Meta-Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
+<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script type='text/javascript' src='js/search_result.js'></script>
+<!-- //js -->
+<!-- web-fonts -->  
+<link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<!-- //web-fonts -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+</head>
+
+<body class="bg">
+<!-- menu -->
+	<button class="btn-nav w3layouts_btn">
+		<span class="bar arrow-top-r"></span>
+		<span class="bar arrow-middle-r"></span>
+		<span class="bar arrow-bottom-r"></span>
+	</button>
+	<nav class="nav-container hidden hideNav w3_nav">
+	  <ul class="nav-list">
+		<li class="list-item active"><a href="main.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="post.html"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="services.html"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
+	  </ul>
+	</nav>
+	<div id="ban" class="agileinfo_menu w3l_menu">
+		<div class="agileinfo_menu_middle">
+			<br>
+			<h1><a href="main.html">Room of Requirements</a></h1>
+		</div>
+
+		<div class="clearfix"> </div>
+	</div>
+<!-- //menu -->
+<!-- banner -->
+	<div class="banner1" id="result_report">
+		<h3 style="color:white;">My Page</h3>
+	</div>
+<!-- //banner -->
+<!-- card-of-item -->
+<div id = "my_cards">
+	<div class="card">	
+		<div class="cardposter"> 
+			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar"> 
+			<p>John<p> 
+			<i class="material-icons">message</i> 
+		</div>	
+		<div class="container">	
+			<h3><b>Lost a wallet(demo)</b></h3> 
+			<button class="item_lost_btom">lost</button>
+			<p>posted on 02/02/2017</p>
+			<br>
+			<p>The wallet is lost in xxx store, containing xxxx</p>
+		</div>
+		<div class="operate">
+			<button>contact</button>
+		</div>
+	</div>
+
+</div>	
+
+<!-- //card-of-item -->
+<!-- footer -->
+	<div class="footer_app">
+		<div class="agileits_footer_app_left">
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- //footer -->
+
+</body>
+</html>
