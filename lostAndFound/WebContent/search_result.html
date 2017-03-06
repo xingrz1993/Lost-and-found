@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Post</title> 
+<title>Search Results</title>
 <!-- For-Mobile-Apps-and-Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //For-Mobile-Apps-and-Meta-Tags -->
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
-<script type='text/javascript' src='js/post.js'></script>
+<script type='text/javascript' src='js/search_result.js'></script>
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -28,6 +30,7 @@
 	});
 </script>
 </head>
+
 <body>
 <!-- menu -->
 <!-- nav-bar -->
@@ -146,58 +149,39 @@
 				</script>
 <!--//pop-up-box -->
 <!-- banner -->
-<!--	<div class="banner1">
-		<h3 style="color:white;"><b>Post Your Item</b></h3>
-	</div> -->
-<!-- //banner -->
-<!-- post -->
-	<div class="post">
-		<form id="post_form" method="post" action="no">
-		<div class="w3l_post_left">
-			<h4><b><input type="radio" name="property" value="lost" checked>Lost
-			<input type="radio" name="property" value="found">Found<br></b></h4>
-			<br>
-
-			<h4><b>Item Title:</b></h4> <input type="text" name="title" style="width:80%" required><br>
-			<br>
-			
-			<h4><b>Date of Lost/Found: </b></h4>
-			<!--<input type="text" name="date">-->
-			<input type="radio" name="withdate" value="yes">
-			<input class="date" id="datepicker" name="date" type="text" placeholder="yyyy-mm-dd" style="width:50%;" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2017-03-04';}" >
-			<br>
-			<input type="radio" name="withdate" value="no" checked>I forgot.
-			<br>
-			<br>	
-			
-			<h4><b>Description:</b></h4> 
-			<textarea rows="10" cols="26" name="description" required></textarea>
-			<br>
-		</form>
-		<form action="/php/upload.php" method="post" enctype="multipart/form-data">
-			<h4><b>Photo Upload:</b></h4>
-			<div>
-				<button class="search_btom_2" type="submit"  name="upload">Upload</button>
-				<input type="file" name="photoToUpload" id="photoToUpload">
-			</div> 
-			<br>
-			<br>
-			<div>
-				<h4><b>Position:</b></h4>
-				<div id="map" style="width:100%;height:300px;" ></div>
+	<div class="banner1" id="result_report">
+		<h3 style="color:white;"><b>XX results found.</b></h3>
+			<div class="search_btom_1">
+				<a href="search_on_map.html">Search on Map</a>
 			</div>
-
-			<button class="search_btom_1" type="button" id="post_btom" name="submit">Submit</button>	
-			
-
+	</div>
+<!-- //banner -->
+<!-- card-of-item -->
+<div id = "result_cards">
+	<div class="card">	
+		<div class="cardposter"> 
+			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar"> 
+			<p>John<p> 
+			<i class="material-icons">message</i> 
 		</div>	
-		
-		</form> 
-		
+		<div class="card_container">				
+			<h3 class="card_container_title"><b>Lost a wallet(demo)</b></h3> 
+			<button class="item_unsolved_bton">unsolved</button><button class="item_lost_bton">lost</button>
+			<p>posted on 2017-02-02</p>
+			<br>
+			<p class="card_container_des">The wallet is lost in xxx store, containing xxxxxxxxx xxx x xxxxxx xxxxxx xx xxxxxx xxxx xx. I need more words to fill in this area. I need more words to fill in this area. I need more words to fill in this area. </p>
+		</div>
+	</div>
+</div>		
+
+<!-- //card-of-item -->
+<!-- footer -->
+	<div class="footer_app">
+		<div class="agileits_footer_app_left">
+		</div>
 		<div class="clearfix"> </div>
 	</div>
-	
-	<!-- //post -->
+<!-- //footer -->
 <!-- nav -->
 <script>
  $(window).load(function() {
@@ -208,53 +192,6 @@
  });
 </script>
 <!-- //nav -->
-    <script>
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
-function initMap() {
-  var your_pos;
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 6
-  });
-
-  var pos;
-
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) { 
-	var myLatlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-	var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    draggable:true,
-    title:"Your location"
-	});
-      map.setCenter(pos);
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-  
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-}
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm3LGS3tNSXWQW2p6m02Mgfhqz3_BsPZo&callback=initMap"
-        async defer>
-    </script>
 </body>
 </html>
+
