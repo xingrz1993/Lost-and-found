@@ -21,8 +21,8 @@ function hideURLbar(){ window.scrollTo(0,1); }
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
 <script src='js/main_get.js'></script>
-<script src='js/login.js'></script>
-<script src='js/sign_up.js'></script>
+<!--script src='js/login.js'></script-->
+<!--script src='js/sign_up.js'></script-->
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -76,14 +76,14 @@ function hideURLbar(){ window.scrollTo(0,1); }
 	<div id="small-dialog" class="mfp-hide">
 		<h2><b>Log In</b></h2>		
 		<div class="modal-body agileits_modal_body">
-			 <form action="#" method="post" id="login">
+			 <form action="excuteLogInJsonAction" method="post"> <!--id="login"-->
 				<span>
 					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-					<input type="email" name="Email" placeholder="Email" required=""/>
+					<input type="text" name="username" placeholder="username" required=""/>
 				</span>
 				<span class="w3_modal">
 					<i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
-					<input type="password" name="Password" placeholder="Password" required=""/>
+					<input type="password" name="userpass" placeholder="Password" required=""/>
 				</span>
 				<div class="agile_remember">
 					<div class="agile_remember_left">
@@ -96,7 +96,7 @@ function hideURLbar(){ window.scrollTo(0,1); }
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-				<input type="submit" value="Log In">
+				<input type="submit"  value="Log In">
 			</form>
 			<h5>Don't have an account? <a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></h5>
 		</div>
@@ -104,22 +104,22 @@ function hideURLbar(){ window.scrollTo(0,1); }
 	<div id="small-dialog1" class="mfp-hide">
 		<h2><b>Sign Up</b></h2>		
 		<div class="modal-body w3_agileits_modal_body">
-			<form action="#" method="post" id="sign_up">
+			<form action="excuteSignUpJsonAction" method="post"><!--action="#" method="post" id="sign_up"-->
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Username</span>
-					<input type="text" name="Name" placeholder=" " required=""/>
+					<input type="text" name="username" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Password</span>
-					<input type="password" name="Password" placeholder=" " required=""/>
+					<input type="password" name="password" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Email</span>
-					<input type="email" name="Email" placeholder=" " required=""/>
+					<input type="email" name="email" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Mobile</span>
-					<input type="text" name="Mobile" placeholder=" " required=""/>
+					<input type="text" name="mobile" placeholder=" " required=""/>
 				</div>
 				<input type="submit" value="Sign Up">
 			</form>
