@@ -20,6 +20,7 @@
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script type='text/javascript' src='js/search.js'></script>
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -118,7 +119,14 @@
 				<script src="js/jquery-ui.js"></script>
 				  <script>
 						  $(function() {
-							$( "#datepicker" ).datepicker();
+							$( "#datepicker" ).datepicker({
+								dateFormat: "yy-mm-dd"
+							});
+						  });
+						  $(function() {
+							$( "#datepicker2" ).datepicker({
+								dateFormat: "yy-mm-dd"
+							});
 						  });
 				  </script>
 			<!-- //Calendar -->
@@ -159,33 +167,23 @@
 				<div class="search_panel">
 					<div class="search_detail">
 						<br>
-						<input type="checkbox" name="search_type" value="lost" checked>Lost
-						<input type="checkbox" name="search_type" value="found" checked>Found
+						<input type="checkbox" name="search_type" value="lost" id="lost_check" checked>Lost
+						<input type="checkbox" name="search_type" value="found" id="found_check" checked>Found
 						<br>
 						<br>
 						<input type="checkbox" name="search_type" value="date">Date:
 						<p>Since</p>
-						<input class="date" id="datepicker" name="since_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;" >
+						<input class="date" id="datepicker" name="since_date" type="text" placeholder="yyyy-mm-dd" style="width:50%;" >
 						<p>Until</p>
-						<input class="date" id="datepicker2" name="until_date" type="text" placeholder="mm/dd/yyyy" style="width:50%;"  >
+						<input class="date" id="datepicker2" name="until_date" type="text" placeholder="yyyy-mm-dd" style="width:50%;"  >
 						<br>
-						<input type="checkbox" name="search_type" value="solved">Include solved cases.
+						<input type="checkbox" name="solved" value="solved">Include solved cases.
 						<br>
 						<br>
 					</div>
 				</div>				
 			</div>
-
-			<div class="banner-bottom-search" style="height:100px">
-				<div class="banner_btom_search">
-					<div class="banner_btom_4">
-						<a href="search_result.html">Search</a>
-					</div>
-					<div class="banner_btom_5">
-						<a href="post.html">Post</a>
-					</div>
-				</div>
-			</div>
+			<button class="search_btom_1" type="submit">GO!</button>
 		</form>
 	</div>
 <!-- //banner-bottom -->

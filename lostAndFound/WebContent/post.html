@@ -68,7 +68,7 @@
 	<div id="small-dialog" class="mfp-hide">
 		<h2><b>Log In</b></h2>		
 		<div class="modal-body agileits_modal_body">
-			 <form action="#" method="post">
+			 <form action="#" method="post" id="sign_up">
 				<span>
 					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
 					<input type="email" name="Email" placeholder="Email" required=""/>
@@ -120,7 +120,9 @@
 				<script src="js/jquery-ui.js"></script>
 				  <script>
 						  $(function() {
-							$( "#datepicker" ).datepicker();
+							$( "#datepicker" ).datepicker({
+ 							  dateFormat: "yy-mm-dd"
+ 							});
 						  });
 				  </script>
 			<!-- //Calendar -->

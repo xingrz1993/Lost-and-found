@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Settings</title> 
+<title>Room of Requirements -- a lost-and-found platform</title> 
 <!-- For-Mobile-Apps-and-Meta-Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript"> 
+addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //For-Mobile-Apps-and-Meta-Tags -->
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-<link rel='stylesheet' id='fluid_dg-css'  href='css/fluid_dg.css' type='text/css' media='all'>
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+<script src='js/main_get.js'></script>
+<script src='js/login.js'></script>
+<script src='js/sign_up.js'></script>
 <!-- //js -->
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -68,20 +72,34 @@
 		<div class="clearfix"> </div>
 	</div>
 <!-- //menu -->
-<!-- banner -->
-	<div class="banner1">
-		<h3 style="color:white;"><b>Settings</b></h3>
+
+<!-- card-of-item -->
+<div id = "cards">
+	<div class="card">	
+		<div class="cardposter"> 
+			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar"> 
+			<p>John<p> 
+			<i class="material-icons">message</i> 
+		</div>	
+		<div class="card_container">				
+			<h3 class="card_container_title"><b>Lost a wallet(demo)</b></h3> 
+			<button class="item_unsolved_bton">unsolved</button><button class="item_lost_bton">lost</button>
+			<p>posted on 2017-02-02</p>
+			<br>
+			<p class="card_container_des">The wallet is lost in xxx store, containing xxxxxxxxx xxx x xxxxxx xxxxxx xx xxxxxx xxxx xx. I need more words to fill in this area. I need more words to fill in this area. I need more words to fill in this area. </p>
+		</div>
 	</div>
-<!-- //banner -->
-<div class="settings">
 
-	<div class="setting_bton"><p>Update Info<p></div>
-	<div class="setting_bton"><p>Update Password<p></div>
+</div>	
 
-
-</div>
-	<button class="search_btom_1">Log out</button>
-
+<!-- //card-of-item -->
+<!-- footer -->
+	<div class="footer_app">
+		<div class="agileits_footer_app_left">
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- //footer -->
 
 <!-- nav -->
 <script>

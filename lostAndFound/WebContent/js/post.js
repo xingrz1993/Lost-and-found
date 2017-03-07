@@ -2,9 +2,8 @@
 
 	$("#post_btom").click(function(){
 		var item = {
-			"property":($("input[name='property']")).val(),
+			"property":($("input[name='property']:checked")).val(),
 			"title":($("input[name='title']")).val(),
-	//		"category":($("select[name='category']")).val(),
 			"date":($("input[name='date']")).val(),
 			"description":$("textarea[name='description']").val()
 		};
