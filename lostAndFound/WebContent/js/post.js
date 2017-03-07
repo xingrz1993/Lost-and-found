@@ -12,8 +12,9 @@
 		var itemStr = JSON.stringify(item);
 		$.ajax({
 		type:'POST',
-		url:'api/get',
+		url:'excutePostJsonAction',
 		data: itemStr,
+		dataType:"json",
 		success: function(data){console.log(data)},
 		error: function(jqXHR){console.log(jqXHR)},
 		});

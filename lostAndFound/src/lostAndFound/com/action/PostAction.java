@@ -11,7 +11,7 @@ public class PostAction extends ActionSupport implements ServletRequestAware{
 		private static final long serialVersionUID = 1L;
 	
 	private HttpServletRequest request;
-	private String result;
+	//private String result;
 
 	public void setServletRequest(HttpServletRequest arg0) {
 		this.request = arg0;
