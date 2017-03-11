@@ -12,6 +12,7 @@
 <!-- //Custom Theme files -->
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- //font-awesome icons -->
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
@@ -58,36 +59,41 @@
 <!-- //menu -->
 <!-- banner -->
 	<div class="banner1" id="result_report">
-		<h3 style="color:white;">Item Details</h3>
+		<h3>Item Details</h3>
 	</div>
 <!-- //banner -->
 <!-- card-of-item -->
 <div id = "item_detail">
 	<!-- title -->
-	<div>
+	<div class="card">
 	<!-- User info -->
-		<div style="float:left;">
+		<div class = "cardposter">
 			<img class="cardposter" src="./images/img_avatar.png" alt="Avatar">
 			<p>username</p>
+			<i class="material-icons">message</i>
+			<br>
+			
 		</div>
 	<!-- Item title -->	
-		<div>
+		<div class="card_container">
 			<h3><b>Lost a wallet(demo)</b></h3>
-			<button class="item_lost_btom">lost</button>
-			<p>posted on 02/02/2017</p>
+			<button class="item_unsolved_bton">unsolved</button><button class="item_lost_bton">lost</button>
+			<p>posted on 2017-02-02</p>
 		</div>
-	</div>
 	<!-- Item details -->
-	<div>
-	<p>The wallet is lost in xxx building. The wallet is red. My ID card is in, with name XXX, which is very important for me. It's also containing a photo of my daughter. If you pick it up, please contact me by email or mobile, you will be well rewarded. Thank you in advance.</p>
-	<img src="./images/wallet.jpg">
-	<div>
+		<div>
+		<p>The wallet is lost in xxx building. The wallet is red. My ID card is in, with name XXX, which is very important for me. It's also containing a photo of my daughter. If you pick it up, please contact me by email or mobile, you will be well rewarded. Thank you in advance.</p>
+		<center><img class="item_photo" src="./images/wallet.jpg"></center>
+		<button class="search_btom_1" type="submit">Share</button>
+	</div>
+
 </div>	
 
 <!-- //card-of-item -->
 <!-- footer -->
 	<div class="footer_app">
 		<div class="agileits_footer_app_left">
+		<
 		</div>
 		<div class="clearfix"> </div>
 	</div>
