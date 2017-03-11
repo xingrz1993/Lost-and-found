@@ -448,17 +448,7 @@ img.cardposter{
     bottom: 0%;
     left:43.5%;
 }
-@media (max-width: 768px){
-	.banner1 {
-		min-height: 130px;
-	}
-	.banner1 h3{
-		padding: .8em 0 1em;
-	}
-	.banner1 h3:after{
-		left: 37%;
-	}
-}
+
 #back_to_fluid_dg {
 	background: rgba(2,2,2,.5);
 	clear: both;
@@ -2998,4 +2988,8 @@ nav.w3agile_paging {
 	padding:2em 2em;
 	margin:1em 0;
 	background-color:#fff;
+	background-image: url("../images/ic_right.png");
+    background-position: right center;
+	/*background-size: 30px;*/
+    background-repeat: no-repeat;
 }
